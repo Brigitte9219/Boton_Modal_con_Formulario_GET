@@ -9,17 +9,17 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 })
 export class AppComponent {
   title = 'prueba';
-  overlay: any;
+  
 
   constructor(public dialog: MatDialog) { }
 
-  abrirFormulario(): void {
+  abrirFormulario(id: string): void {
     const dialogRef = this.dialog.open(FormularioComponent, {
       width: '800px',
       height: '600px',
       //panelClass: 'custom-dialog-container',
       disableClose: false,
-      //data: { /* datos a pasar al modal */ },
+      data: { id: id },
       //ariaDescribedBy: 'modal-description',
       //ariaLabel: 'Modal de edición de formulario',
       //position: { top: '50px', left: '50px' },
