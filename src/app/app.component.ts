@@ -30,4 +30,5 @@ export class AppComponent {
 
     // Aquí puedes suscribirte a eventos del modal si es necesario
   }
+  
 }

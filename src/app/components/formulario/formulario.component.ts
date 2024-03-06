@@ -20,4 +20,10 @@ export class FormularioComponent implements OnInit {
       this.dato = data;
     });
   }
+
+  guardarDatos(): void {
+    this.dataService.guardarDatos(this.dato).subscribe(response => {
+      console.log('Datos guardados exitosamente:', response);
+    });
+  }
 }
